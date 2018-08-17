@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Company.Services.Components.Models.Employee>
+@{
+    ViewBag.Title = "Home";
+    Layout = "~/Views/Shared/MainLayout.cshtml";
+}
+<div class="form-horizontal">
+
+    <hr />
+    <div class="form-group">
+
+
+        <table class="table table-responsive" style="width:400px">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.FirstName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.LastName)
+                </th>
+
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FirstName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.LastName)
+                    </td>
+
+                </tr>
+            }
+
+        </table>
+    </div>
+</div> 
